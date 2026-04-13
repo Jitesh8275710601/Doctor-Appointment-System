@@ -1,6 +1,10 @@
 const express = require("express");
+const { connectDB } = require("./src/config/db");
 const app = express();
+const authRoutes = require("./src/routes/authRoutes")
 
+connectDB();
+app.use(express.json());
 app.get("/", (req, res) => {
     res.send("Homepage");
 })
@@ -13,6 +17,8 @@ app.get("/users", (req, res) => {
         <h1>797237236876</h1>
         `)
 })
+
+app.use("/auth", authRoutes);
 
 app.listen(3000, () => {
     console.log("server started at http://localhost:3000");
