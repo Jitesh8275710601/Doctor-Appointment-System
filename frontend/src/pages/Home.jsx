@@ -29,24 +29,6 @@ const doctors = [
 const Home = () => {
   return (
     <div className="home">
-{/* NAVBAR */}
-<header className="navbar">
-  <div className="logo">
-    💙 <span>HealthCare+</span>
-  </div>
-
-  <nav className="nav-links">
-    <a href="#">Home</a>
-    <a href="#">Services</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-    <a href="#">Find Doctors</a>
-  </nav>
-
-  <div className="menu-icon">
-    ☰
-  </div>
-</header>
       {/* HERO SECTION */}
       <section className="hero">
         <h1>Your Health, Our Priority</h1>
@@ -100,11 +82,6 @@ const Home = () => {
           <div className="card">
             <h3>24/7 Support</h3>
             <p>Round-the-clock assistance for your healthcare needs</p>
-          </div>
-
-          <div className="card">
-            <h3>Secure & Private</h3>
-            <p>Your health data is protected with top security standards</p>
           </div>
         </div>
       </section>

@@ -1,8 +1,27 @@
 /* GLOBAL */
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;   /* allow page to grow beyond viewport */
+  height: auto;        /* let content define height */
+  overflow-x: hidden;  /* prevent sideways scrollbars */
+  overflow-y: auto;    /* enable vertical scrolling */
+}
+
+
+
+
 .home {
   font-family: "Segoe UI", sans-serif;
   color: #1f2937;
   background: #f9fafb;
+}
+
+/* CONTAINER (IMPORTANT FIX) */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 h1, h2, h3 {
@@ -11,6 +30,7 @@ h1, h2, h3 {
 
 p {
   color: #6b7280;
+  line-height: 1.6;
 }
 
 /* BUTTONS */
@@ -29,7 +49,7 @@ p {
 }
 
 .secondary-btn {
-  background: #e5e7eb;
+  background: #6ddfd4;
   border: none;
   padding: 10px 18px;
   border-radius: 8px;
@@ -40,34 +60,75 @@ p {
   background: #d1d5db;
 }
 
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+.nav-links {
+  display: none;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #374151;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #2563eb;
+}
+
+.menu-icon {
+  font-size: 22px;
+  cursor: pointer;
+}
+
 /* HERO */
 .hero {
-  padding: 40px 20px;
   text-align: center;
+  padding: 60px 20px;
 }
 
 .hero h1 {
-  font-size: 32px;
-  margin-bottom: 10px;
+  font-size: 36px;
+  margin-bottom: 15px;
 }
 
 .hero p {
-  max-width: 500px;
-  margin: 0 auto 20px;
+  max-width: 600px;
+  margin: 0 auto 25px;
 }
 
 .hero-buttons {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin-bottom: 20px;
+  gap: 12px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
 }
 
 .stats {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  margin: 20px 0;
+  gap: 40px;
+  margin: 30px 0;
+  flex-wrap: wrap;
 }
 
 .stats h2 {
@@ -78,12 +139,13 @@ p {
   width: 100%;
   max-width: 600px;
   border-radius: 12px;
-  margin-top: 20px;
+  margin: 30px auto 0;
+  display: block;
 }
 
 /* FEATURES */
 .features {
-  padding: 40px 20px;
+  padding: 60px 20px;
   text-align: center;
 }
 
@@ -92,9 +154,9 @@ p {
 }
 
 .feature-cards {
-  margin-top: 20px;
+  margin-top: 30px;
   display: grid;
-  gap: 15px;
+  gap: 20px;
 }
 
 .card {
@@ -107,12 +169,12 @@ p {
 
 /* DOCTORS */
 .doctors {
-  padding: 40px 20px;
+  padding: 60px 20px;
   text-align: center;
 }
 
 .doctor-list {
-  margin-top: 20px;
+  margin-top: 30px;
   display: grid;
   gap: 20px;
 }
@@ -146,28 +208,25 @@ p {
   background: #2563eb;
   color: white;
   text-align: center;
-  padding: 40px 20px;
+  padding: 60px 20px;
 }
 
 .cta p {
   color: #dbeafe;
-  margin: 10px 0 20px;
+  margin: 15px 0 25px;
 }
 
 /* FOOTER */
 .footer {
   background: #111827;
   color: #e5e7eb;
-  padding: 40px 20px;
-}
-
-.footer-top {
-  margin-bottom: 20px;
+  padding: 50px 20px;
 }
 
 .footer-links {
   display: grid;
-  gap: 20px;
+  gap: 25px;
+  margin-top: 20px;
 }
 
 .footer h4 {
@@ -181,7 +240,7 @@ p {
 }
 
 .footer-bottom {
-  margin-top: 20px;
+  margin-top: 30px;
   text-align: center;
   font-size: 14px;
   color: #9ca3af;
@@ -189,8 +248,16 @@ p {
 
 /* RESPONSIVE */
 @media (min-width: 768px) {
+  .nav-links {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
   .hero h1 {
-    font-size: 40px;
+    font-size: 44px;
   }
 
   .feature-cards {
@@ -208,7 +275,7 @@ p {
 
 @media (min-width: 1024px) {
   .hero {
-    padding: 60px;
+    padding: 80px 20px;
   }
 
   .feature-cards {
@@ -217,59 +284,5 @@ p {
 
   .doctor-list {
     grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* NAVBAR */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  background: white;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-
-.logo {
-  font-size: 20px;
-  font-weight: bold;
-  color: #2563eb;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.nav-links {
-  display: none;
-  gap: 20px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #374151;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-.nav-links a:hover {
-  color: #2563eb;
-}
-
-.menu-icon {
-  font-size: 22px;
-  cursor: pointer;
-}
-
-/* Desktop Navbar */
-@media (min-width: 768px) {
-  .nav-links {
-    display: flex;
-  }
-
-  .menu-icon {
-    display: none;
   }
 }

@@ -5,12 +5,6 @@ const About = () => {
   return (
     <div className="about">
 
-      {/* NAVBAR */}
-      <header className="navbar">
-        <div className="logo">💙 <span>HealthCare+</span></div>
-        <div className="menu">☰</div>
-      </header>
-
       {/* HERO / ABOUT */}
       <section className="about-hero">
         <h1>About HealthCare+</h1>

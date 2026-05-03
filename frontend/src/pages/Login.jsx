@@ -4,49 +4,45 @@ import Home from "./Home";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-   const navigate = useNavigate();
   return (
-    <div className="login-container">
-      <div className="login-card">
-        {/* Header */}
-        <div className="header">
-          <div className="logo">💙</div>
-          <h2>HealthCare+</h2>
-          <h1>Welcome Back</h1>
-          <p>Sign in to manage your healthcare</p>
-        </div>
+    <div className="container">
+      <div className="card">
+        <h2 className="logo">DocCure+</h2>
+        <h3>Welcome Back</h3>
+        <p className="subtitle">Sign in to manage your DocCure</p>
 
-        {/* Form */}
-        <div className="form" >
-          <h3>Patient Login</h3>
-          <p className="sub-text">
-            Access your appointments and medical records
-          </p>
-
+        <form>
           <label>Email</label>
-          <input type="email" placeholder="patient@example.com" />
+          <input
+            type="email"
+            placeholder="patient@example.com"
+            required
+          />
 
           <label>Password</label>
-          <input type="password" placeholder="••••••••" />
+          <input
+            type="password"
+            placeholder="••••••••"
+            required
+          />
 
-          <div className="options">
-            <label>
-              <input type="checkbox" /> Remember me
-            </label>
-            <span className="forgot">Forgot password?</span>
+          <div class="login-options">
+            <div class="remember-container">
+              <input type="checkbox" id="remember" />
+              <label for="remember">Remember me</label>
+            </div>
+            <a href="#" class="forgot-link">Forgot password?</a>
           </div>
 
-          <button className="btn" onClick={() => navigate("/home")}>
-            Sign In
-          </button>
 
-          <p className="signup">
-            Don’t have an account? <span>Sign up</span>
-          </p>
-        </div>
+          <button type="submit">Sign In</button>
+        </form>
+
+        <p className="signup">
+          Don't have an account? <a href="#">Sign up</a>
+        </p>
       </div>
     </div>
   );
 };
-
 export default Login;
