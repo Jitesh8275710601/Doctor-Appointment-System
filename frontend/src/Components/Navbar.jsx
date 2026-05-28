@@ -9,15 +9,7 @@ const Navbar = () => {
     <header className="navbar">
       <div className="logo">
         💙 <span>DocCure+</span>
-      </div>
-
-      {/* Hamburger */}
-      <div
-        className="hamburger"
-        onClick={() => setMenuOpen(!menuOpen)}
-      >
-        ☰
-      </div>
+        </div>
 
       {/* Nav Links */}
       <nav className={`nav-links ${menuOpen ? "active" : ""}`}>

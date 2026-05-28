@@ -47,55 +47,6 @@
   flex-direction: column;
 }
 
-/* ══════════════════════════════════════
-   NAVBAR
-══════════════════════════════════════ */
-.fd-navbar {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: #fff;
-  border-bottom: 1px solid var(--fd-border);
-  padding: 0 20px;
-  height: 56px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.fd-navbar__brand {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-family: var(--fd-font-display);
-  font-size: 18px;
-  font-weight: 800;
-  color: var(--fd-text);
-  text-decoration: none;
-}
-
-.fd-navbar__brand-icon {
-  color: var(--fd-primary);
-}
-
-.fd-navbar__menu-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: var(--fd-text-3);
-  padding: 6px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.fd-navbar__menu-btn span {
-  display: block;
-  width: 22px;
-  height: 2px;
-  background: var(--fd-text-2);
-  border-radius: 2px;
-}
 
 /* ══════════════════════════════════════
    HERO / SEARCH SECTION

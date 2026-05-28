@@ -33,33 +33,6 @@
   color: #2563eb;
 }
 
-/* Hamburger (hidden on desktop) */
-.hamburger {
-  display: none;
-  font-size: 26px;
-  cursor: pointer;
-}
-
-/* 🔽 Mobile styles */
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-
-  .nav-links {
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background: white;
-    width: 200px;
-    flex-direction: column;
-    gap: 15px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    display: none;
-  }
-
   .nav-links.active {
     display: flex;
   }
-}
