@@ -84,6 +84,11 @@ const Home = () => {
             <h3>24/7 Support</h3>
             <p>Round-the-clock assistance for your healthcare needs</p>
           </div>
+
+            <div className="card">
+            <h3>Convenient Access</h3>
+            <p>Access healthcare services from the comfort of your home</p>
+          </div>
         </div>
       </section>
 
@@ -101,11 +106,7 @@ const Home = () => {
       {/* FOOTER */}
       <footer className="footer">
      <footer className="footer">
-  <img 
-    src="/logo.png" 
-    alt="HealthCare+ Logo" 
-    className="footer-logo" 
-  />
+    💙 Docure+ 
   <p>Quality healthcare made accessible for everyone.</p>
 </footer>
 

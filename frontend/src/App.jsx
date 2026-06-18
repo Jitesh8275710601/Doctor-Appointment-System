@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 
 import Login from "./pages/Login";
 import Register from "./pages/Register";
@@ -11,9 +11,15 @@ import Navbar from "./Components/Navbar";
 import DoctorDashboard from "./pages/DoctorDashboard";
 
 function App() {
+  const location = useLocation();
+
+  // Hide Navbar on Login and Register pages
+  const hideNavbar =
+    location.pathname === "/" || location.pathname === "/register";
+
   return (
     <>
-      <Navbar /> {/* 👈 Always visible */}
+      {!hideNavbar && <Navbar />}
 
       <Routes>
         <Route path="/" element={<Login />} />

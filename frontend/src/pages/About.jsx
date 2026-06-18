@@ -7,7 +7,7 @@ const About = () => {
 
       {/* HERO / ABOUT */}
       <section className="about-hero">
-        <h1>About  HealthCare+</h1>
+        <h2>About  Docure+</h2>
         <p>
           We're on a mission to make quality healthcare accessible,
           convenient, and affordable for everyone.
@@ -124,19 +124,19 @@ const About = () => {
 
           <div className="team-card">
             <img src="/doctor1.png" alt="doctor" />
-            <h4>Dr. Chinmay Pujare</h4>
+            <h4>Dr. RamKrishna Manchekar</h4>
             <p>Chief Medical Officer</p>
           </div>
 
           <div className="team-card">
             <img src="/doctor1.png" alt="doctor" />
-            <h4>Dr. Roshan Shirke</h4>
+            <h4>Dr. Suhas Redkar</h4>
             <p>Director of Cardiology</p>
           </div>
 
           <div className="team-card">
             <img src="/doctor1.png" alt="doctor" />
-            <h4>Dr. Jitesh Khadapkar</h4>
+            <h4>Dr. Amol Zatya</h4>
             <p>Head of Pediatrics</p>
           </div>
 
@@ -168,7 +168,7 @@ const About = () => {
 
       {/* FOOTER */}
       <footer className="footer">
-        <h3>💙 HealthCare+</h3>
+        <h3>💙 Docure+</h3>
         <p>Quality healthcare made accessible for everyone.</p>
 
         <div className="footer-links">

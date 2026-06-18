@@ -3,30 +3,7 @@ import { useNavigate, useSearchParams, Link } from "react-router-dom";
 import "../styles/FindDoctor.css";
 
 // ── API Layer ──────────────────────────────────────────────────────────────────
-const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
 
-const doctorsAPI = {
-  getAll: async (params = {}) => {
-    const qs = new URLSearchParams(
-      Object.fromEntries(Object.entries(params).filter(([, v]) => v !== undefined && v !== ""))
-    ).toString();
-    const res = await fetch(`${API_BASE}/doctors${qs ? `?${qs}` : ""}`, {
-      signal: params._signal,
-    });
-    if (!res.ok) throw new Error(`Server error ${res.status}`);
-    return res.json();
-  },
-  getSpecialties: async () => {
-    const res = await fetch(`${API_BASE}/doctors/specialties`);
-    if (!res.ok) throw new Error("Failed to load specialties");
-    return res.json();
-  },
-  getLocations: async () => {
-    const res = await fetch(`${API_BASE}/doctors/locations`);
-    if (!res.ok) throw new Error("Failed to load locations");
-    return res.json();
-  },
-};
 
 // ── Fallback mock data (when backend is not running) ───────────────────────────
 const MOCK_DOCTORS = [
@@ -275,15 +252,8 @@ const DoctorCard = ({ doctor, onBook }) => {
 // ── Navbar ─────────────────────────────────────────────────────────────────────
 const Navbar = () => (
   <nav className="fd-navbar">
-    <Link to="/" className="fd-navbar__brand">
-      <svg className="fd-navbar__brand-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
-        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-      </svg>
-      HealthCare+
-    </Link>
-    <button className="fd-navbar__menu-btn" aria-label="Menu">
-      <span /><span /><span />
-    </button>
+    
+    
   </nav>
 );
 
@@ -291,10 +261,7 @@ const Navbar = () => (
 const Footer = () => (
   <footer className="fd-footer">
     <div className="fd-footer__brand">
-      <svg className="fd-footer__brand-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
-        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-      </svg>
-      HealthCare+
+      💙 Docure+ 
     </div>
     <p className="fd-footer__tagline">
       Quality healthcare made accessible for everyone. Your health, our priority.
