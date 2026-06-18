@@ -2,66 +2,67 @@ import React from "react";
 import "../styles/Home.css"; // adjust path if needed
 
 
-const doctors = [
-  {
-    name: "Dr. Chinmay Pujare",
-    specialty: "Cardiologist",
-    rating: 4.9,
-    patients: "2500+ patients",
-    img: "/doctor1.png",
-  },
-  {
-    name: "Dr. Roshan Shirke",
-    specialty: "Neurologist",
-    rating: 4.8,
-    patients: "3200+ patients",
-    img: "/doctor1.png",
-  },
-  {
-    name: "Dr. Jitesh Khadapkar",
-    specialty: "Pediatrician",
-    rating: 5.0,
-    patients: "1800+ patients",
-    img: "/doctor1.png",
-  },
-];
-
 const Home = () => {
   return (
     <div className="home">
       {/* HERO SECTION */}
       <section className="hero">
-        <h1>Your Health, Our Priority</h1>
+
+    <div className="hero-content">
+
+        <span className="hero-tag">
+            Trusted Healthcare Platform
+        </span>
+
+        <h1>
+            Your Health,
+            <span> Our Priority</span>
+        </h1>
+
         <p>
-          Book appointments with top doctors instantly. Quality healthcare made
-          accessible and convenient for everyone.
+            Book appointments with top doctors instantly.
+            Quality healthcare made accessible and
+            convenient for everyone.
         </p>
 
         <div className="hero-buttons">
-          <button className="primary-btn">Book Appointment</button>
-          <button className="secondary-btn">Learn More</button>
+            <button className="primary-btn">
+                Book Appointment
+            </button>
+
+            <button className="secondary-btn">
+                Learn More
+            </button>
         </div>
 
         <div className="stats">
-          <div>
-            <h2>500+</h2>
-            <p>Doctors</p>
-          </div>
-          <div>
-            <h2>50K+</h2>
-            <p>Patients</p>
-          </div>
-          <div>
-            <h2>4.9</h2>
-            <p>Rating</p>
-          </div>
+
+            <div>
+                <h2>500+</h2>
+                <p>Doctors</p>
+            </div>
+
+            <div>
+                <h2>50K+</h2>
+                <p>Patients</p>
+            </div>
+
+            <div>
+                <h2>4.9★</h2>
+                <p>Rating</p>
+            </div>
+
         </div>
-<img
-  src="/doctormain.png"
-  alt="Doctor"
-  className="doctormain"
-/>
-      </section>
+
+    </div>
+
+    <div className="hero-image">
+
+        <img src="/doctormain.png" alt="Doctor"/>
+
+    </div>
+
+</section>
 
       {/* WHY CHOOSE US */}
       <section className="features">
@@ -87,24 +88,7 @@ const Home = () => {
       </section>
 
       {/* DOCTORS SECTION */}
-      <section className="doctors">
-        <h2>Meet Our Doctors</h2>
-        <p>Trusted healthcare professionals at your service</p>
-
-        <div className="doctor-list">
-          {doctors.map((doc, index) => (
-            <div className="doctor-card" key={index}>
-              <img src={doc.img} alt={doc.name} />
-              <h3>{doc.name}</h3>
-              <p className="specialty">{doc.specialty}</p>
-              <p>⭐ {doc.rating}</p>
-              <p className="patients">{doc.patients}</p>
-              <button className="primary-btn">View Profile</button>
-            </div>
-          ))}
-        </div>
-      </section>
-
+    
       {/* CTA SECTION */}
       <section className="cta">
         <h2>Ready to Get Started?</h2>
@@ -116,13 +100,15 @@ const Home = () => {
 
       {/* FOOTER */}
       <footer className="footer">
-        <div className="footer-top">
-          <h3>HealthCare+</h3>
-          <p>
-            Quality healthcare made accessible for everyone. Your health, our
-            priority.
-          </p>
-        </div>
+     <footer className="footer">
+  <img 
+    src="/logo.png" 
+    alt="HealthCare+ Logo" 
+    className="footer-logo" 
+  />
+  <p>Quality healthcare made accessible for everyone.</p>
+</footer>
+
 
         <div className="footer-links">
           <div>

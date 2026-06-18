@@ -7,7 +7,7 @@ const About = () => {
 
       {/* HERO / ABOUT */}
       <section className="about-hero">
-        <h1>About HealthCare+</h1>
+        <h1>About  HealthCare+</h1>
         <p>
           We're on a mission to make quality healthcare accessible,
           convenient, and affordable for everyone.
