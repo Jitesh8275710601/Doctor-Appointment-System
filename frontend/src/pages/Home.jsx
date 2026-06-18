@@ -104,41 +104,61 @@ const Home = () => {
       </section>
 
       {/* FOOTER */}
-      <footer className="footer">
-     <footer className="footer">
-    💙 Docure+ 
-  <p>Quality healthcare made accessible for everyone.</p>
+<footer className="footer">
+  <div className="footer-container">
+
+    {/* Logo & Description */}
+    <div className="footer-logo">
+      <h2>💙 Docure+</h2>
+      <p>
+        Quality healthcare made accessible for everyone.
+      </p>
+    </div>
+
+    {/* Footer Links */}
+    <div className="footer-links">
+
+      <div className="footer-column">
+        <h4>Quick Links</h4>
+        <a href="/">About Us</a>
+        <a href="/">Services</a>
+        <a href="/">Find Doctors</a>
+        <a href="/">Patient Portal</a>
+      </div>
+
+      <div className="footer-column">
+        <h4>Support</h4>
+        <a href="/">FAQ</a>
+        <a href="/">Contact Us</a>
+        <a href="/">Help Center</a>
+      </div>
+
+      <div className="footer-column">
+        <h4>Contact</h4>
+        <p>📧 contact@healthcare.com</p>
+        <p>📞 +1 (555) 123-4567</p>
+        <p>📍 123 Medical Center, NY</p>
+      </div>
+
+    </div>
+
+    {/* Social Icons */}
+    <div className="footer-social">
+      <a href="/">f</a>
+      <a href="/">𝕏</a>
+      <a href="/">📷</a>
+      <a href="/">in</a>
+    </div>
+
+    <hr />
+
+    {/* Copyright */}
+    <div className="footer-bottom">
+      © 2026 Docure+. All rights reserved.
+    </div>
+
+  </div>
 </footer>
-
-
-        <div className="footer-links">
-          <div>
-            <h4>Quick Links</h4>
-            <p>About Us</p>
-            <p>Services</p>
-            <p>Find Doctors</p>
-            <p>Patient Portal</p>
-          </div>
-
-          <div>
-            <h4>Support</h4>
-            <p>FAQ</p>
-            <p>Contact Us</p>
-            <p>Help Center</p>
-          </div>
-
-          <div>
-            <h4>Contact</h4>
-            <p>Email: contact@healthcare.com</p>
-            <p>Phone: +1 (555) 123-4567</p>
-            <p>Address: 123 Medical Center, NY</p>
-          </div>
-        </div>
-
-        <div className="footer-bottom">
-          <p>© 2026 HealthCare+. All rights reserved.</p>
-        </div>
-      </footer>
     </div>
   );
 };

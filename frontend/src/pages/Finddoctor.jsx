@@ -267,19 +267,24 @@ const Footer = () => (
       Quality healthcare made accessible for everyone. Your health, our priority.
     </p>
 
-    {/* Social Icons */}
-    <div className="fd-footer__social">
-      {[
-        { label: "Facebook", icon: "f" },
-        { label: "Twitter", icon: "𝕏" },
-        { label: "Instagram", icon: "⬡" },
-        { label: "LinkedIn", icon: "in" },
-      ].map((s) => (
-        <a key={s.label} href="#" className="fd-footer__social-link" aria-label={s.label}>
-          {s.icon}
-        </a>
-      ))}
-    </div>
+{/* Social Icons */}
+<div className="fd-footer__social">
+  {[
+    { label: "Facebook", icon: "f" },
+    { label: "Twitter", icon: "𝕏" },
+    { label: "Instagram", icon: "⬡" },
+    { label: "LinkedIn", icon: "in" },
+  ].map((s) => (
+    <a
+      key={s.label}
+      href="#"
+      className="fd-footer__social-link"
+      aria-label={s.label}
+    >
+      {s.icon}
+    </a>
+  ))}
+</div>
 
     {/* Sections */}
     <div className="fd-footer__sections">
