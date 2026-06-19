@@ -261,7 +261,9 @@ const Navbar = () => (
 const Footer = () => (
   <footer className="fd-footer">
     <div className="fd-footer__brand">
-      💙 Docure+ 
+      <center>
+        <h2>💙 Docure+</h2>
+      </center>
     </div>
     <p className="fd-footer__tagline">
       Quality healthcare made accessible for everyone. Your health, our priority.
