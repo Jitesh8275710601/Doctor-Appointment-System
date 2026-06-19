@@ -2,136 +2,118 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
+  font-family: Arial, sans-serif;
 }
 
-.login-container {
-  height: 100vh;
-  background: linear-gradient(to bottom right, #eef3f8, #e6edf5);
+body {
+  background: #e5e7eb;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
-.login-card {
-  width: 380px;
+
+.container {
+  display: flex;
+  justify-content: center;   /* horizontal center */
+  align-items: center;       /* vertical center */
+  height: 100vh;             /* full viewport height */
+  background: #e5e7eb;
+}
+
+
+.card {
   background: #fff;
-  padding: 25px;
-  border-radius: 14px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  width: 350px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
-
-/* Header */
-.header .logo {
-  font-size: 28px;
-  margin-bottom: 5px;
+.logo {
+  color: #3b82f6;
+  margin-bottom: 10px;
 }
 
-.header h2 {
-  color: #2c5cff;
-  margin-bottom: 5px;
-}
-
-.header h1 {
-  font-size: 22px;
-  margin: 10px 0;
-}
-
-.header p {
+.subtitle {
   font-size: 14px;
   color: #666;
   margin-bottom: 20px;
 }
 
-/* Form */
-.form {
+form {
   text-align: left;
 }
 
-.form h3 {
-  margin-bottom: 5px;
-}
-
-.sub-text {
-  font-size: 13px;
-  color: #777;
-  margin-bottom: 15px;
-}
-
-.form label {
-  font-size: 13px;
-  color: #444;
+label {
   display: block;
-  margin-bottom: 5px;
-}
-
-.form input {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 12px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  margin-top: 15px;
   font-size: 14px;
-  outline: none;
 }
 
-.form input:focus {
-  border-color: #2c5cff;
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
 }
 
-/* Options */
 .options {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 10px;
   font-size: 13px;
-  margin-bottom: 15px;
 }
 
-.options input {
-  margin-right: 5px;
-}
-
-.forgot {
-  color: #2c5cff;
-  cursor: pointer;
-}
-
-/* Button */
-.btn {
+button {
   width: 100%;
   padding: 12px;
-  background: #2c5cff;
-  color: white;
+  margin-top: 20px;
+  background: #3b82f6;
+  color: #fff;
   border: none;
   border-radius: 8px;
-  font-size: 15px;
   cursor: pointer;
-  transition: 0.3s;
 }
 
-.btn:hover {
-  background: #1f47d6;
+button:hover {
+  background: #2563eb;
 }
 
-/* Signup */
 .signup {
-  text-align: center;
+  margin-top: 15px;
   font-size: 14px;
-  margin-top: 15px;
 }
 
-.signup span {
-  color: #2c5cff;
+/* Container for checkbox + text */
+.remember-container {
+  display: flex;
+  align-items: center;   /* vertically center checkbox with text */
+  gap: 6px;              /* space between checkbox and text */
+  font-size: 14px;
+  color: #374151;        /* neutral text color */
+}
+
+.remember-container input[type="checkbox"] {
+  margin: 0;             /* remove default spacing */
+  width: 10px;
+  height: 10px;
   cursor: pointer;
+  margin-top: 12px;
 }
 
-/* Back */
-.back {
-  margin-top: 15px;
+.login-options {
+  display: flex;
+  justify-content: space-between; /* left: checkbox, right: link */
+  align-items: center;
+  margin-top: 10px;
+}
+
+.forgot-link {
   font-size: 13px;
-  color: #555;
-  text-align: center;
-  cursor: pointer;
+  color: #3b82f6;
+  text-decoration: none;
 }

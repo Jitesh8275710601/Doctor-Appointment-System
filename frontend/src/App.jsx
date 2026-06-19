@@ -1,20 +1,37 @@
 import React from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
+
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import Home from "./pages/Home"; // adjust path if needed
+import Home from "./pages/Home";
 import About from "./pages/About";
-import { Routes, Route } from "react-router-dom";
+import Services from "./pages/Services";
+import FindDoctor from "./pages/Finddoctor";
+import Navbar from "./Components/Navbar";
+import DoctorDashboard from "./pages/DoctorDashboard";
+
 function App() {
+  const location = useLocation();
+
+  // Hide Navbar on Login and Register pages
+  const hideNavbar =
+    location.pathname === "/" || location.pathname === "/register";
+
   return (
-    <Routes>
-      <Route path="/" element={<Login />} /> 
-      <Route path="/register" element={<Register />} />
-      <Route path="/home" element={<Home />} />
-      <Route path="/about" element={<About />}/>   
-    </Routes>
-  ) ;
-   
-  
+    <>
+      {!hideNavbar && <Navbar />}
+
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/finddoctor" element={<FindDoctor />} />
+        <Route path="/doctordashboard" element={<DoctorDashboard />} />
+      </Routes>
+    </>
+  );
 }
 
 export default App;

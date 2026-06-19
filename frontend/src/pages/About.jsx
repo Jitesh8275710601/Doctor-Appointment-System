@@ -5,45 +5,40 @@ const About = () => {
   return (
     <div className="about">
 
-      {/* NAVBAR */}
-      <header className="navbar">
-        <div className="logo">💙 <span>HealthCare+</span></div>
-        <div className="menu">☰</div>
-      </header>
+<div className="about-hero">
+  <div className="about-content">
+    <h1 style={{ marginBottom: "30px" }}>About Docure+</h1>
 
-      {/* HERO / ABOUT */}
-      <section className="about-hero">
-        <h1>About HealthCare+</h1>
-        <p>
-          We're on a mission to make quality healthcare accessible,
-          convenient, and affordable for everyone.
-        </p>
+    <p className="subtitle">
+      We're on a mission to make quality healthcare accessible,
+      convenient, and affordable for everyone.
+    </p>
 
-      <img
-  src="/doctormain.png"
-  alt="Doctor"
-  className="doctormain"
-/>
-      </section>
+    <div className="story">
+      <h2>Our Story</h2>
 
-      {/* STORY */}
-      <section className="story">
-        <h2>Our Story</h2>
-        <p>
-          Founded in 2015, HealthCare+ began with a simple vision: to bridge
-          the gap between patients and quality healthcare providers.
-        </p>
+      <p>
+        Founded in 2015, HealthCare+ began with a simple vision:
+        to bridge the gap between patients and quality healthcare providers.
+      </p>
 
-        <p>
-          Today, we've grown into a leading healthcare platform, serving over
-          50,000 patients and partnering with more than 500 certified medical
-          professionals.
-        </p>
+      <p>
+        Today, we've grown into a leading healthcare platform,
+        serving over 50,000 patients and partnering with more than
+        500 certified medical professionals.
+      </p>
 
-        <p>
-          Our platform combines cutting-edge technology with compassionate care.
-        </p>
-      </section>
+      <p>
+        Our platform combines cutting-edge technology with
+        compassionate care.
+      </p>
+    </div>
+  </div>
+
+  <div className="about-image">
+    <img src="/doctormain.png" alt="Doctor with patient" />
+  </div>
+</div>
 
       {/* MISSION & VISION */}
       <section className="mission-vision">
@@ -124,25 +119,27 @@ const About = () => {
 
       {/* TEAM */}
       <section className="team">
-        <h2>Leadership Team</h2>
+        <h2 style={{padding: "40px 20px",textAlign: "center",}}>
+       Leadership Team
+       </h2>
 
         <div className="team-list">
 
           <div className="team-card">
             <img src="/doctor1.png" alt="doctor" />
-            <h4>Dr. Chinmay Pujare</h4>
+            <h4>Dr. RamKrishna Manchekar</h4>
             <p>Chief Medical Officer</p>
           </div>
 
           <div className="team-card">
             <img src="/doctor1.png" alt="doctor" />
-            <h4>Dr. Roshan Shirke</h4>
+            <h4>Dr. Suhas Redkar</h4>
             <p>Director of Cardiology</p>
           </div>
 
           <div className="team-card">
             <img src="/doctor1.png" alt="doctor" />
-            <h4>Dr. Jitesh Khadapkar</h4>
+            <h4>Dr. Amol Zatya</h4>
             <p>Head of Pediatrics</p>
           </div>
 
@@ -172,37 +169,62 @@ const About = () => {
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="footer">
-        <h3>💙 HealthCare+</h3>
-        <p>Quality healthcare made accessible for everyone.</p>
+       {/* FOOTER */}
+<footer className="footer">
+  <div className="footer-container">
 
-        <div className="footer-links">
-          <div>
-            <h4>Quick Links</h4>
-            <p>About Us</p>
-            <p>Services</p>
-            <p>Find Doctors</p>
-          </div>
+    {/* Logo & Description */}
+    <div className="footer-logo">
+      <h2 style={{ color: "white"}}>💙 Docure+</h2>
+      <p>
+        Quality healthcare made accessible for everyone.
+      </p>
+    </div>
 
-          <div>
-            <h4>Support</h4>
-            <p>FAQ</p>
-            <p>Contact</p>
-          </div>
+    {/* Footer Links */}
+    <div className="footer-links">
 
-          <div>
-            <h4>Contact</h4>
-            <p>Email: contact@healthcare.com</p>
-            <p>Phone: +1 555 123 4567</p>
-          </div>
-        </div>
+      <div className="footer-column">
+        <h4>Quick Links</h4>
+        <a href="/about">About Us</a>
+        <a href="/Services">Services</a>
+        <a href="/Finddoctor">Find Doctors</a>
+        <a href="/home">Patient Portal</a>
+      </div>
 
-        <p className="copyright">
-          © 2026 HealthCare+. All rights reserved.
-        </p>
-      </footer>
+      <div className="footer-column">
+        <h4>Support</h4>
+        <p href="/">FAQ</p>
+        <a href="tel:+918275710601">Contact Us</a>
+        <p href="/">Help Center</p>
+      </div>
 
+      <div className="footer-column">
+        <h4>Contact</h4>
+        <a href="mailto:jiteshkhadapkar03@gmail.com">📧 contact@healthcare.com</a>
+        <a  href="tel:+918275710601">📞 +1 (555) 123-4567</a>
+        <a href="https://maps.app.goo.gl/gBdvFmfxKyqYz3Jc8">📍 123 Medical Center, NY</a>
+      </div>
+
+    </div>
+
+    {/* Social Icons */}
+    <div className="footer-social">
+      <a href="/">f</a>
+      <a href="/">𝕏</a>
+      <a href="/">📷</a>
+      <a href="/">in</a>
+    </div>
+
+    <hr />
+
+    {/* Copyright */}
+    <div className="footer-bottom">
+      © 2026 Docure+. All rights reserved.
+    </div>
+
+  </div>
+</footer>
     </div>
   );
 };
